@@ -19,15 +19,16 @@ import org.jooq.example.db.h2.tables.records.BookRecord;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.jooq.JooqTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * @author Lukas Eder
  * @author Thomas Darimont
+ * @author Michael Simons
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+@JooqTest
 public class QueryTest {
 
 	@Autowired DSLContext create;

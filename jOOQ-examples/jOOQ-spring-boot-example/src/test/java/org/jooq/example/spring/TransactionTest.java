@@ -21,6 +21,12 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 /**
+ * This class cannot make easy use of <code>@JooqTest</code>:
+ * A <code>@JooqTest</code> is transactional by itself and transactions
+ * are propagated by default. So the deklarative exceptions would be 
+ * rollbacked after execution of the tests methods. Therefor, we're running
+ * a full SpringBootTest here.
+ * 
  * @author Petri Kainulainen
  * @author Lukas Eder
  * @author Thomas Darimont
